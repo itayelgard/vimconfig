@@ -1,11 +1,9 @@
 execute pathogen#infect()
 
 "regulars
-set number
 syntax enable
 filetype plugin on
 filetype plugin indent on
-set tabstop=4
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
 let g:powerline_symbols = 'fancy'
 if &term =~ '256color'
@@ -13,7 +11,6 @@ if &term =~ '256color'
     " work properly when Vim is used inside tmux and GNU screen.
     set t_ut=
 endif
-set laststatus=2
 "set number 
 "custom keybinds
 
@@ -69,21 +66,21 @@ let g:airline_theme='minimalist'
 
 let s:hidden_all = 0 
 function! ToggleHiddenAll()
-	if s:hidden_all  == 0 
-		let s:hidden_all = 1
-		set noshowmode
-		set noruler
-		set laststatus=0
-		set noshowcmd
-		set nonumber 
-	else
-		let s:hidden_all = 0
-		set showmode
-		set ruler
-		set laststatus=2
-		set showcmd
-		set number
-	endif
+    if s:hidden_all  == 0 
+        let s:hidden_all = 1
+        set noshowmode
+        set noruler
+        set laststatus=0
+        set noshowcmd
+        set nonumber 
+    else
+        let s:hidden_all = 0
+        set showmode
+        set ruler
+        set laststatus=2
+        set showcmd
+        set number
+    endif
 endfunction
 "use command "ToggleStatus"/ "TS" to toggle the statusBar
 command ToggleStatus :call ToggleHiddenAll()<CR> 
@@ -98,13 +95,13 @@ imap <f5> <c-o>:call ToggleHebrew()<cr>
 map <f5> :call ToggleHebrew()<cr>
 
 func! ToggleHebrew()
-	if &rl
-		set norl
-		set keymap=
-	else
-		set rl
-		set keymap=hebrew
-	end
+    if &rl
+        set norl
+        set keymap=
+    else
+        set rl
+        set keymap=hebrew
+    end
 endfunc
 " copy paste
 vmap <C-c> "+y
@@ -120,10 +117,15 @@ map <S-Enter> O<ESC>
 
 map <C-n> :NERDTreeToggle<CR>
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
 
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set expandtab ts=4 sw=4 ai
+set smartindent
+set noshowmode
+set number
