@@ -1,0 +1,1 @@
+/home/itay/vimconfig/.vim/
