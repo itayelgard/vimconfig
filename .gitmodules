@@ -43,3 +43,6 @@
 [submodule ".vim/bundle/papercolor-theme"]
 	path = .vim/bundle/papercolor-theme
 	url = https://github.com/NLKNguyen/papercolor-theme
+[submodule ".vim/bundle/vimtex"]
+	path = .vim/bundle/vimtex
+	url = https://github.com/lervag/vimtex
