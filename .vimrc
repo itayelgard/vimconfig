@@ -30,7 +30,7 @@ let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&complet
 let g:SuperTabClosePreviewOnPopupClose = 1
 
  " clang autocomplete stuff 
-let g:clang_library_path='/usr/lib64/libclang.so.4'
+let g:clang_library_path='/usr/lib64/libclang.so.5'
 let g:AutoPairsMapCR = 0
 
 "haskell
@@ -129,3 +129,4 @@ set expandtab ts=4 sw=4 ai
 set smartindent
 set noshowmode
 set number
+set laststatus=0
