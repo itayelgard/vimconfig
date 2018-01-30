@@ -46,3 +46,6 @@
 [submodule ".vim/bundle/vimtex"]
 	path = .vim/bundle/vimtex
 	url = https://github.com/lervag/vimtex
+[submodule ".vim/bundle/vim-vividchalk"]
+	path = .vim/bundle/vim-vividchalk
+	url = https://github.com/tpope/vim-vividchalk
