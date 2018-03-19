@@ -49,3 +49,6 @@
 [submodule ".vim/bundle/vim-vividchalk"]
 	path = .vim/bundle/vim-vividchalk
 	url = https://github.com/tpope/vim-vividchalk
+[submodule ".vim/bundle/clang_complete"]
+	path = .vim/bundle/clang_complete
+	url = https://github.com/Rip-Rip/clang_complete
