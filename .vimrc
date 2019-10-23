@@ -18,7 +18,7 @@ endif
 command R !./% 
 
 "supertab python
-"autocmd FileType python setlocal completeopt-=preview
+autocmd FileType python setlocal completeopt-=preview
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:jedi#popup_on_dot = 1
@@ -30,7 +30,7 @@ let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&complet
 let g:SuperTabClosePreviewOnPopupClose = 1
 
  " clang autocomplete stuff 
-let g:clang_library_path='/usr/lib64/libclang.so.5'
+let g:clang_library_path='/usr/lib/libclang.so'
 let g:AutoPairsMapCR = 0
 
 "haskell
@@ -131,3 +131,7 @@ set noshowmode
 set number
 set laststatus=0
 let g:clang_library_path="/usr/lib/llvm-3.8/lib/libclang.so.1"
+set ignorecase
+set incsearch
+let g:clang_library_path='/usr/lib/libclang.so'
+set directory=.,$TEMP
