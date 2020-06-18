@@ -5,6 +5,9 @@ syntax enable
 filetype plugin on
 filetype plugin indent on
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
+
+
+
 let g:powerline_symbols = 'fancy'
 if &term =~ '256color'
     " Disable Background Color Erase (BCE) so that color schemes
@@ -22,6 +25,7 @@ autocmd FileType python setlocal completeopt-=preview
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 let g:SuperTabClosePreviewOnPopupClose = 1
 let g:jedi#popup_on_dot = 1
+"let g:jedi#force_py_version = 3
 
 "Super tab settings - uncomment the next 4 lines
 let g:SuperTabDefaultCompletionType = 'context'
@@ -106,6 +110,7 @@ endfunc
 " copy paste
 vmap <C-c> "+y
 nmap <C-b> "+p
+map <C-b> "+p
 
 
 "go to normal
