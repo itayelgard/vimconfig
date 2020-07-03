@@ -1,11 +1,21 @@
 execute pathogen#infect()
 
+
+let mapleader = " "
+
+has("python3")
+
+"supertab python
+autocmd FileType python setlocal completeopt-=preview
+let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
+let g:SuperTabClosePreviewOnPopupClose = 0
+let g:jedi#popup_on_dot = 0
+let g:jedi#force_py_version = 3
 "regulars
 syntax enable
 filetype plugin on
 filetype plugin indent on
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
-
 
 
 let g:powerline_symbols = 'fancy'
@@ -16,22 +26,16 @@ if &term =~ '256color'
 endif
 "set number 
 "custom keybinds
-
 "runs current file using :R or f5 in normal mode
 command R !./% 
 
-"supertab python
-autocmd FileType python setlocal completeopt-=preview
-let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabClosePreviewOnPopupClose = 1
-let g:jedi#popup_on_dot = 1
-"let g:jedi#force_py_version = 3
 
 "Super tab settings - uncomment the next 4 lines
-let g:SuperTabDefaultCompletionType = 'context'
-let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
-let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
-let g:SuperTabClosePreviewOnPopupClose = 1
+"let g:SuperTabDefaultCompletionType = 'context'
+"let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+"let g:SuperTabDefaultCompletionTypeDiscovery = ["&omnifunc:<c-x><c-o>","&completefunc:<c-x><c-n>"]
+"let g:SuperTabClosePreviewOnPopupClose = 1
+
 
  " clang autocomplete stuff 
 let g:clang_library_path='/usr/lib/libclang.so'
@@ -52,13 +56,20 @@ let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 let g:haskell_classic_highlighting = 1
 set background=dark
-color gruvbox
+color badwolf
 
 
 " air-line
 let g:airline_powerline_fonts = 1
 let g_Powerline_symbols = 'fancy'
 set encoding=utf-8
+set list
+set listchars=
+set listchars+=tab:·\ 
+set listchars+=trail:·
+set listchars+=extends:»
+set listchars+=precedes:«
+set listchars+=nbsp:░
 set t_Co=256
 let g:airline_theme='minimalist'
 
@@ -84,6 +95,9 @@ function! ToggleHiddenAll()
         set laststatus=2
         set showcmd
         set number
+        set list
+        set cursorline 
+        set nowrap
     endif
 endfunction
 "use command "ToggleStatus"/ "TS" to toggle the statusBar
@@ -134,9 +148,15 @@ set expandtab ts=4 sw=4 ai
 set smartindent
 set noshowmode
 set number
+set list
+set cursorline 
+set nowrap
 set laststatus=0
 let g:clang_library_path="/usr/lib/llvm-3.8/lib/libclang.so.1"
 set ignorecase
 set incsearch
 let g:clang_library_path='/usr/lib/libclang.so'
 set directory=.,$TEMP
+
+autocmd VimLeave * call system("xsel -ib", getreg('+'))
+

@@ -58,3 +58,21 @@
 [submodule ".vim/bundle/matchit"]
 	path = .vim/bundle/matchit
 	url = https://github.com/tmhedberg/matchit
+[submodule ".vim/bundle/dracula"]
+	path = .vim/bundle/dracula
+	url = git@github.com:dracula/vim.git
+[submodule ".vim/bundle/inkpot"]
+	path = .vim/bundle/inkpot
+	url = https://github.com/ciaranm/inkpot
+[submodule ".vim/bundle/oceanic"]
+	path = .vim/bundle/oceanic
+	url = https://github.com/smlombardi/oceanic-next-syntax
+[submodule ".vim/bundle/badwolf"]
+	path = .vim/bundle/badwolf
+	url = https://github.com/sjl/badwolf
+[submodule ".vim/bundle/YouCompleteMe"]
+	path = .vim/bundle/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe
+[submodule ".vim/bundle/snipmate.vim"]
+	path = .vim/bundle/snipmate.vim
+	url = https://github.com/ervandew/snipmate.vim
