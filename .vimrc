@@ -21,6 +21,7 @@ Plugin 'auto-pairs-gentle'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'justmao945/vim-clang'
+Plugin 'joshdick/onedark.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -86,7 +87,7 @@ set smartindent
 set noshowmode
 set number
 set list
-set cursorline
+"set cursorline
 set nowrap
 set laststatus=0
 let python_highlight_all = 1
@@ -99,7 +100,7 @@ let g:clang_library_path='/usr/lib/libclang.so'
 set directory=.,$TEMP
 
 set background=dark
-color badwolf
+color onedark "badwolf
 
 "airline
 let g:airline_powerline_fonts = 1
