@@ -1,4 +1,3 @@
 ln -s `pwd`/.vimrc ~/.vimrc 
 ln -s `pwd`/.vim/ ~/.vim
-git submodule init 
-git submodule update
+git submodule update --init --recursive -j 8
