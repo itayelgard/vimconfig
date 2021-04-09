@@ -1,31 +1,25 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-" let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
-" plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'sjl/badwolf'
+"Plugin 'joshdick/onedark.vim'
+Plugin 'chriskempson/base16-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'auto-pairs-gentle'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'justmao945/vim-clang'
-Plugin 'joshdick/onedark.vim'
 
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
+call vundle#end()
+filetype plugin indent on
 
 
 "jedi stuff
@@ -100,7 +94,9 @@ let g:clang_library_path='/usr/lib/libclang.so'
 set directory=.,$TEMP
 
 set background=dark
-color onedark "badwolf
+"let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
+set termguicolors
 
 "airline
 let g:airline_powerline_fonts = 1
@@ -119,3 +115,6 @@ let g:airline_theme='minimalist'
 
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
 
+"fix backspace
+
+set backspace=2
