@@ -64,6 +64,9 @@ imap <f2> <c-o>:call ToggleHiddenAll()<cr>
 "nerd tree
 map <C-n> :NERDTreeToggle<CR>
 
+" vim-clang
+map <C-i> :ClangCloseWindow<CR>
+
 "copy paste
 vmap <C-c> "+p
 nmap <C-b> "+p
@@ -81,7 +84,7 @@ set smartindent
 set noshowmode
 set number
 set list
-"set cursorline
+set cursorline
 set nowrap
 set laststatus=0
 let python_highlight_all = 1
@@ -110,7 +113,7 @@ set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=nbsp:░
 set t_Co=256
-let g:airline_theme='minimalist'
+let g:airline_theme='luna'
 
 
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
