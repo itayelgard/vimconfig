@@ -33,15 +33,15 @@ let g:jedi#force_py_version = 3
 
 "hide status line:
 
-let s:hidden_all = 0 
+let s:hidden_all = 0
 function! ToggleHiddenAll()
-    if s:hidden_all  == 0 
+    if s:hidden_all  == 0
         let s:hidden_all = 1
         set noshowmode
         set noruler
         set laststatus=0
         set noshowcmd
-        set nonumber 
+        set nonumber
     else
         let s:hidden_all = 0
         set showmode
@@ -50,14 +50,14 @@ function! ToggleHiddenAll()
         set showcmd
         set number
         set list
-        set cursorline 
+        set cursorline
         set nowrap
     endif
 endfunction
 "use command "ToggleStatus"/ "TS" to toggle the statusBar
-command ToggleStatus :call ToggleHiddenAll()<CR> 
+command ToggleStatus :call ToggleHiddenAll()<CR>
 
-command TS :call ToggleHiddenAll()<cr> 
+command TS :call ToggleHiddenAll()<cr>
 map <f2> :call ToggleHiddenAll()<cr>
 imap <f2> <c-o>:call ToggleHiddenAll()<cr>
 "hebrew
@@ -117,7 +117,8 @@ set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=nbsp:░
 set t_Co=256
-let g:airline_theme='luna'
+"let g:airline_theme='luna'
+let g:airline_theme='minimalist'
 
 
 vmap <C-c> :<Esc>`>a<CR><Esc>mx`<i<CR><Esc>my'xk$v'y!xclip -selection c<CR>u
