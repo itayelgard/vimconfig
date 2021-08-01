@@ -11,7 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 "Plugin 'joshdick/onedark.vim'
-Plugin 'chriskempson/base16-vim'
+"Plugin 'chriskempson/base16-vim'
+Plugin 'ghifarit53/tokyonight-vim'
 Plugin 'preservim/nerdtree'
 Plugin 'auto-pairs-gentle'
 Plugin 'davidhalter/jedi-vim'
@@ -84,7 +85,7 @@ set smartindent
 set noshowmode
 set number
 set list
-set cursorline
+"set cursorline
 set nowrap
 set laststatus=0
 let python_highlight_all = 1
@@ -98,7 +99,10 @@ set directory=.,$TEMP
 
 set background=dark
 "let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default-dark
+"colorscheme base16-default-dark
+colorscheme tokyonight
+hi Normal guibg=NONE ctermbg=NONE
+
 set termguicolors
 
 "airline
